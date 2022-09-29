@@ -28,9 +28,9 @@
     <div class="col-sm-12">
       <div class="input-group">
         <input ref="date" :name="name" :placeholder="title"
-               :title="title" :value="value ? value.substr(0,10): ''"
+               :title="title" :value="value ? value.slice(0, 19) : ''"
                autocomplete="off"
-               class="form-control" type="date"
+               class="form-control" type="datetime-local"
                @input="handleInput">
         <span class="input-group-btn">
             <button

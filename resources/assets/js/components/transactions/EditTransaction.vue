@@ -411,7 +411,7 @@ export default {
       this.transactions.push({
         transaction_journal_id: transaction.transaction_journal_id,
         description: transaction.description,
-        date: transaction.date.substr(0, 10),
+        date: transaction.date.slice(0, 19),
         amount: this.roundNumber(this.positiveAmount(transaction.amount), transaction.currency_decimal_places),
         category: transaction.category_name,
         errors: {
